@@ -5,8 +5,6 @@
  * E-mail: lexgorbunov@swdrom.com
  */
 package ru.lglab {
-import flash.filters.BitmapFilter;
-import flash.filters.BlurFilter;
 import flash.filters.GlowFilter;
 import flash.geom.Point;
 import flash.geom.Rectangle;

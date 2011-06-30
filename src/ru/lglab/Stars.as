@@ -7,25 +7,26 @@
 package ru.lglab {
 import flash.display.Bitmap;
 import flash.display.BitmapData;
-import flash.display.DisplayObject;
 import flash.display.DisplayObjectContainer;
+import flash.display.Loader;
 import flash.display.StageAlign;
 import flash.display.StageDisplayState;
 import flash.display.StageQuality;
 import flash.display.StageScaleMode;
 import flash.events.Event;
 import flash.events.KeyboardEvent;
-import flash.filters.BlurFilter;
-import flash.geom.Point;
 import flash.geom.Rectangle;
+import flash.media.Sound;
+import flash.media.SoundChannel;
+import flash.media.SoundLoaderContext;
 import flash.net.SharedObject;
+import flash.net.URLRequest;
 import flash.text.TextField;
 import flash.text.TextFieldAutoSize;
 import flash.text.TextFormat;
-import flash.utils.getTimer;
 import flash.utils.setTimeout;
 
-import mx.controls.Alert;
+import mx.messaging.Channel;
 
 public class Stars {
     public var app:DisplayObjectContainer;
@@ -39,12 +40,14 @@ public class Stars {
     var height:uint;
     var widthDef:uint;
     var heightDef:uint;
-    var imageList:RemoteImageList=new RemoteImageList();
+    var resourceList:RemoteResourceList=new RemoteResourceList();
     var preloadBoard:Bitmap=new ilib.imgLoading;
     var preloadAnimate:Animate;
     var lastVisitDate:Date;
     var visites:SharedObject=SharedObject.getLocal("visites");
     var lastVisitInfoText:TextField=new TextField();
+    var bgSound:Sound;
+    var bgSoundChanel:SoundChannel;
 
     public function Stars(stg:DisplayObjectContainer, windowWidth, windowHeight) {
         app=stg;
@@ -59,21 +62,33 @@ public class Stars {
         app.addChild(preloadBoard);
         app.addChild(preloadAnimate);
 //return;
-        imageList.onCompleteXmlLoad=function(){
+        resourceList.onCompleteXmlLoad=function(){
             background.onComplete=function(){
-                setTimeout(init,1000);
+                // Loading music
+                var sndLoader:Sound=new Sound();
+                sndLoader.addEventListener(Event.COMPLETE, function(e:Event){
+                    bgSound = e.currentTarget as Sound;
+                    bgSoundChanel=bgSound.play();
+                    bgSoundChanel.addEventListener(Event.SOUND_COMPLETE, function(e:Event){
+                        bgSoundChanel=bgSound.play();
+                    });
+                    setTimeout(init,1000);
+                });
+                sndLoader.load(
+                        new URLRequest(resourceList.getSoundUrl(resourceList.getSoundIdsList()[0])),
+                        new SoundLoaderContext());
                 background.onComplete=null;
             };
-            if(imageList.exists('wallpaper'))
-                background.source=imageList.getImageUrl('wallpaper');
+            if(resourceList.existsImage('wallpaper'))
+                background.source=resourceList.getImageUrl('wallpaper');
             else
                 trace('Невозможно загрузить картинку "wallpaper"');
-            if(imageList.exists('star'))
-                faces=new Faces(imageList.getImageUrl('star'));
+            if(resourceList.existsImage('star'))
+                faces=new Faces(resourceList.getImageUrl('star'));
             else
                 trace('Невозможно загрузить картинку "star"');
         }
-        imageList.loadXml('http://lglab.ru/xmlserver');
+        resourceList.loadXml('http://lglab.ru/xmlserver');
     }
     function init(){
         app.removeChild(preloadBoard);
@@ -90,14 +105,12 @@ public class Stars {
         }
         else
             lastVisitInfoText.text='Это первый запуск программы';
-        trace(lastVisitInfoText.text);
         visites.data.lastVisitDate=new Date();
         //initialization
         app.stage.scaleMode=StageScaleMode.NO_SCALE;
         app.stage.align=StageAlign.TOP;
         app.stage.quality=StageQuality.MEDIUM;
         app.stage.addEventListener(KeyboardEvent.KEY_DOWN, function(e:KeyboardEvent){
-            trace(e.keyCode)
             if(e.keyCode==9){
                 app.stage.displayState=StageDisplayState.FULL_SCREEN;
             }

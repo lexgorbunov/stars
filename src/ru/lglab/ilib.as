@@ -6,7 +6,6 @@
  * To change this template use File | Settings | File Templates.
  */
 package ru.lglab {
-import flash.display.Bitmap;
 
 public class ilib {
 //    [Embed(source="../../../res/img/smile1.png")] public static var smile1:Class;
