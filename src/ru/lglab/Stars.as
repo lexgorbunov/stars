@@ -152,10 +152,6 @@ public class Stars {
         paper.bitmapData.fillRect(new Rectangle(0,0,width,height),prop.bgColor);
     }
 
-    var tm1:int=getTimer();
-    var tm2:int;
-    var sec:Number=0;
-    var fps=0;
     public function onEveryFrame(e:Event){
         clearPaper();
         for each (var face:Face in faces.suit)
@@ -163,14 +159,6 @@ public class Stars {
             face.updateMatrixOnStep();
             paper.bitmapData.draw(faces.original,face.mat,face.colorTrans,null,null,true);
         }
-//        fps++;
-//        tm2=getTimer();
-//        if(tm2-tm1>=1000)
-//        {
-////            trace(fps)
-//            fps=0;
-//            tm1=getTimer();
-//        }
     }
 }
 }
