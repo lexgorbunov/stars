@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" initialize="onInit()" frameRate="30" width="800" height="640" backgroundColor="#000000">
+    <mx:Script><![CDATA[
+        import ru.lglab.Stars;
+
+        function onInit(){
+            if(this.parent)
+            new ru.lglab.Stars(this.parent,application.width,application.height);
+        }
+        ]]></mx:Script>
+</mx:Application>
