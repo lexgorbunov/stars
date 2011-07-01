@@ -49,7 +49,7 @@ public class Animate extends Bitmap {
     }
 
     private function onTimer(e:TimerEvent) {
-        super.bitmapData = cadrs[pos];
+        bitmapData = cadrs[pos];
         pos++;
         if (pos >= cadrsCount)
             pos = 0;

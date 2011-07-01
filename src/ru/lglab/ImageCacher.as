@@ -20,7 +20,6 @@ public class ImageCacher extends Bitmap {
     private var url:String = '';
     private var _onComplete:Function;
     private var _onError:Function;
-    private static var _onQueueEnd:Function;
 
     /**
      * To load images
@@ -41,6 +40,7 @@ public class ImageCacher extends Bitmap {
     public function set source(urlp:String):void {
         if (cached[urlp] != null) {
             super.bitmapData = cached[urlp];
+            url = urlp;
             return;
         }
         queue.push(urlp);
@@ -60,18 +60,9 @@ public class ImageCacher extends Bitmap {
         _onError = value;
     }
 
-    public function set onQueueEnd(value:Function):void {
-        _onQueueEnd = value;
-    }
-
     private function load() {
         if (waitUrl != '')
             return;
-        if (queue.length == 0) {
-            if (_onQueueEnd != null)
-                _onQueueEnd();
-            return;
-        }
         waitUrl = queue.pop();
         url = waitUrl;
         loader.load(new URLRequest(waitUrl), new LoaderContext())
