@@ -9,12 +9,14 @@ import flash.display.Bitmap;
 import flash.display.BitmapData;
 import flash.display.DisplayObjectContainer;
 import flash.display.Loader;
+import flash.display.Sprite;
 import flash.display.StageAlign;
 import flash.display.StageDisplayState;
 import flash.display.StageQuality;
 import flash.display.StageScaleMode;
 import flash.events.Event;
 import flash.events.KeyboardEvent;
+import flash.events.MouseEvent;
 import flash.geom.Rectangle;
 import flash.media.Sound;
 import flash.media.SoundChannel;
@@ -48,7 +50,25 @@ public class Stars {
     var lastVisitInfoText:TextField=new TextField();
     var bgSound:Sound;
     var bgSoundChanel:SoundChannel;
-
+    var musicButtom:ImageCacher=new ImageCacher();
+    var musicState:Boolean=false;
+    var musicPos:uint=0;
+    public function musicPlayPause(e:MouseEvent){
+        trace('Click')
+        if(!musicState)
+        {
+            musicButtom.source=resourceList.getImageUrl('pause');
+            bgSoundChanel=bgSound.play(musicPos);
+            musicState=true;
+        }
+        else
+        {
+            musicButtom.source=resourceList.getImageUrl('play');
+            musicPos=bgSoundChanel.position;
+            bgSoundChanel.stop();
+            musicState=false;
+        }
+    }
     public function Stars(stg:DisplayObjectContainer, windowWidth, windowHeight) {
         app=stg;
         widthDef=windowWidth;
@@ -61,7 +81,6 @@ public class Stars {
         preloadAnimate.y = preloadBoard.y+preloadBoard.height;
         app.addChild(preloadBoard);
         app.addChild(preloadAnimate);
-//return;
         resourceList.onCompleteXmlLoad=function(){
             background.onComplete=function(){
                 // Loading music
@@ -69,10 +88,18 @@ public class Stars {
                 sndLoader.addEventListener(Event.COMPLETE, function(e:Event){
                     bgSound = e.currentTarget as Sound;
                     bgSoundChanel=bgSound.play();
+                    musicState=true;
                     bgSoundChanel.addEventListener(Event.SOUND_COMPLETE, function(e:Event){
                         bgSoundChanel=bgSound.play();
                     });
-                    setTimeout(init,1000);
+                    // Create music button
+                    musicButtom.onComplete=function(){
+                        musicButtom.x = lastVisitInfoText.x-musicButtom.width;
+                        musicButtom.y = height-musicButtom.height;
+                    }
+                    musicButtom.source=resourceList.getImageUrl('pause');
+                    musicButtom.addEventListener(MouseEvent.CLICK,musicPlayPause);
+                    init();
                 });
                 sndLoader.load(
                         new URLRequest(resourceList.getSoundUrl(resourceList.getSoundIdsList()[0])),
@@ -120,12 +147,18 @@ public class Stars {
         background.y=0;
         paper.smoothing = true;
 
+        var paperSprite:Sprite=new Sprite();
+//        paperSprite.addChild(background);
+//        paperSprite.addChild(paper);
+//        paperSprite.mouseEnabled=false;
+//        app.addChild(paperSprite);
+//        app.addEventListener(Event.RESIZE,onResize);
         app.addChild(background);
         app.addChild(paper);
-        app.addEventListener(Event.RESIZE,onResize);
 
         run();
         app.addChild(lastVisitInfoText);
+        app.addChild(musicButtom);
     }
     public function run(){
         setGameSize(widthDef,heightDef);
@@ -151,8 +184,10 @@ public class Stars {
         this.height=(height!=0?height:app.height);
         background.width=this.width;
         background.height=this.height;
-        lastVisitInfoText.x = this.width-lastVisitInfoText.textWidth;
-        lastVisitInfoText.y = this.height-lastVisitInfoText.textHeight;
+        lastVisitInfoText.x = this.width-lastVisitInfoText.textWidth-8;
+        lastVisitInfoText.y = this.height-lastVisitInfoText.textHeight-8;
+        musicButtom.x = lastVisitInfoText.x-musicButtom.width;
+        musicButtom.y = this.height-musicButtom.height;
         faces.produceFaces(500,new Rectangle(0,0,this.width,this.height));
         redrawPaper();
     }

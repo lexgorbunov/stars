@@ -85,7 +85,16 @@
       <file leaf-file-name="Stars.as" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ru/lglab/Stars.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="81" column="48" selection-start="2960" selection-end="2960" vertical-scroll-proportion="0.7340967">
+            <state line="101" column="0" selection-start="3701" selection-end="3701" vertical-scroll-proportion="0.2562418">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ilib.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ru/lglab/ilib.as">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="45" selection-start="1012" selection-end="1012" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -116,9 +125,9 @@
         <option value="$PROJECT_DIR$/src/Stars.mxml" />
         <option value="$PROJECT_DIR$/src/ru/lglab/ImageCacher.as" />
         <option value="$PROJECT_DIR$/src/ru/lglab/Animate.as" />
-        <option value="$PROJECT_DIR$/src/ru/lglab/ilib.as" />
         <option value="$PROJECT_DIR$/src/ru/lglab/Faces.as" />
         <option value="$PROJECT_DIR$/src/ru/lglab/RemoteResourceList.as" />
+        <option value="$PROJECT_DIR$/src/ru/lglab/ilib.as" />
         <option value="$PROJECT_DIR$/src/ru/lglab/Stars.as" />
       </list>
     </option>
@@ -155,7 +164,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -208,8 +216,9 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Favorites" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -228,8 +237,8 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RunManager" selected="Flex.Плеер">
     <configuration default="true" type="Remote" factoryName="Remote">
@@ -254,6 +263,15 @@
         <option name="PhingTarget" enabled="false" />
       </method>
     </configuration>
+    <configuration default="true" type="FlexRunConfigurationType" factoryName="Flex" browser_family="FIREFOX" debugger_sdk="Module SDK" html_or_swf_file_path="" launcher_type="OSDefault" main_class_name="" module_name="" player_path="/usr/bin/flashplayer" run_mode="HtmlOrSwfFile" run_trusted="false" url_to_launch="http://">
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+        <option name="PhingTarget" enabled="false" />
+      </method>
+    </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
       <module name="" />
       <option name="MAIN_CLASS_NAME" />
@@ -265,15 +283,6 @@
       <option name="VM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-        <option name="PhingTarget" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="FlexRunConfigurationType" factoryName="Flex" browser_family="FIREFOX" debugger_sdk="Module SDK" html_or_swf_file_path="" launcher_type="OSDefault" main_class_name="" module_name="" player_path="/usr/bin/flashplayer" run_mode="HtmlOrSwfFile" run_trusted="false" url_to_launch="http://">
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -412,10 +421,10 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32527205" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24614134" sideWeight="0.4498186" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24614134" sideWeight="0.45465538" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24614134" sideWeight="0.54050785" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24614134" sideWeight="0.5356711" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -504,56 +513,44 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/lglab/Utils.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/lglab/ilib.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="166" selection-end="166" vertical-scroll-proportion="0.15018773">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/lglab/Faces.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="14" selection-start="130" selection-end="130" vertical-scroll-proportion="0.09541985">
-          <folding />
-        </state>
+        <state line="7" column="14" selection-start="130" selection-end="130" vertical-scroll-proportion="0.09541985" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/lglab/Face.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="116" selection-end="116" vertical-scroll-proportion="0.13358779">
-          <folding />
-        </state>
+        <state line="7" column="0" selection-start="116" selection-end="116" vertical-scroll-proportion="0.13358779" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/lglab/Animate.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/lglab/RemoteResourceList.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="5" selection-start="946" selection-end="946" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/lglab/ImageCacher.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="40" selection-start="1964" selection-end="1964" vertical-scroll-proportion="0.7371715">
+        <state line="70" column="40" selection-start="1964" selection-end="1964" vertical-scroll-proportion="0.7371715" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/lglab/RemoteResourceList.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="5" selection-start="946" selection-end="946" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/lglab/ilib.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="45" selection-start="1012" selection-end="1012" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/lglab/Stars.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="48" selection-start="2960" selection-end="2960" vertical-scroll-proportion="0.7340967">
+        <state line="101" column="0" selection-start="3701" selection-end="3701" vertical-scroll-proportion="0.2562418">
           <folding />
         </state>
       </provider>
