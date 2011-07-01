@@ -9,6 +9,7 @@ import flash.display.Bitmap;
 import flash.display.Loader;
 import flash.events.ErrorEvent;
 import flash.events.Event;
+import flash.events.MouseEvent;
 import flash.net.URLRequest;
 import flash.system.LoaderContext;
 
@@ -19,6 +20,7 @@ public class ImageCacher extends Bitmap {
     private var waitUrl:String='';
     private var url:String='';
     private var _onComplete:Function;
+    private var _onError:Function;
     private static var _onQueueEnd:Function;
     /**
      * To load images
@@ -28,7 +30,8 @@ public class ImageCacher extends Bitmap {
         loader.contentLoaderInfo.addEventListener(Event.COMPLETE,onLoad);
         loader.contentLoaderInfo.addEventListener(ErrorEvent.ERROR,function(e:ErrorEvent){
             waitUrl='';
-            load();
+            if(_onError!=null)
+                _onError(e);
         });
 
         if(source!='')
@@ -50,6 +53,9 @@ public class ImageCacher extends Bitmap {
     public function set onComplete(value:Function):void{
         _onComplete=value;
     }
+    public function set onError(value:Function):void{
+        _onError=value;
+    }
     public function set onQueueEnd(value:Function):void{
         _onQueueEnd=value;
     }
@@ -69,7 +75,7 @@ public class ImageCacher extends Bitmap {
     private function onLoad(e:Event){
         url=waitUrl;
         cached[waitUrl]=e.currentTarget.content.bitmapData;
-        super.bitmapData=e.currentTarget.content.bitmapData;
+        bitmapData=e.currentTarget.content.bitmapData;
         if(_onComplete!=null)
             _onComplete();
         waitUrl='';

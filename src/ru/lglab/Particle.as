@@ -9,7 +9,7 @@ import flash.geom.ColorTransform;
 import flash.geom.Matrix;
 import flash.geom.Rectangle;
 
-public class Face {
+public class Particle {
     public var mat:Matrix;
     public var colorTrans:ColorTransform;
     public var speedx:Number;
@@ -31,7 +31,7 @@ public class Face {
     public var scalex:Number;
     public var scaley:Number;
 
-    public function Face(orignWidth,orignHeight,scalemin,scalemax,speedx,speedy,speedrot:Number,displayRect:Rectangle){
+    public function Particle(orignWidth,orignHeight,scalemin,scalemax,speedx,speedy,speedrot:Number,displayRect:Rectangle){
         this.speedx=speedx;
         this.speedy=speedy;
         this.speedrot=speedrot;

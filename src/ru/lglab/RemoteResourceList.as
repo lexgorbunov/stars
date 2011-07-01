@@ -67,10 +67,10 @@ public class RemoteResourceList {
         soundList = new Object();
     }
     public function dispose(){
-        for each  (var item in imgList)
+        for (var item in imgList)
             delete imgList[item]
         imgList = null;
-        for each  (var item in soundList)
+        for (var item in soundList)
             delete soundList[item]
         soundList = null;
     }

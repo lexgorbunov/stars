@@ -7,6 +7,7 @@
 package ru.lglab {
 import flash.display.Bitmap;
 import flash.display.BitmapData;
+import flash.display.DisplayObject;
 import flash.display.DisplayObjectContainer;
 import flash.display.Loader;
 import flash.display.Sprite;
@@ -29,10 +30,11 @@ import flash.text.TextFormat;
 import flash.utils.setTimeout;
 
 import mx.messaging.Channel;
+import mx.utils.StringUtil;
 
-public class Stars {
+public class Main {
     public var app:DisplayObjectContainer;
-    var faces:Faces;
+    var stars:Particles;
     var paper:Bitmap=new Bitmap();
     var background:ImageCacher=new ImageCacher();
     var prop:Object={
@@ -46,30 +48,30 @@ public class Stars {
     var preloadBoard:Bitmap=new ilib.imgLoading;
     var preloadAnimate:Animate;
     var lastVisitDate:Date;
-    var visites:SharedObject=SharedObject.getLocal("visites");
+    var visites:SharedObject;
     var lastVisitInfoText:TextField=new TextField();
     var bgSound:Sound;
     var bgSoundChanel:SoundChannel;
-    var musicButtom:ImageCacher=new ImageCacher();
+    var musicButtom:Sprite=new Sprite();
+    var musicButtomImg:ImageCacher=new ImageCacher();
     var musicState:Boolean=false;
     var musicPos:uint=0;
     public function musicPlayPause(e:MouseEvent){
-        trace('Click')
         if(!musicState)
         {
-            musicButtom.source=resourceList.getImageUrl('pause');
+            musicButtomImg.source=resourceList.getImageUrl('pause');
             bgSoundChanel=bgSound.play(musicPos);
             musicState=true;
         }
         else
         {
-            musicButtom.source=resourceList.getImageUrl('play');
+            musicButtomImg.source=resourceList.getImageUrl('play');
             musicPos=bgSoundChanel.position;
             bgSoundChanel.stop();
             musicState=false;
         }
     }
-    public function Stars(stg:DisplayObjectContainer, windowWidth, windowHeight) {
+    public function Main(stg:DisplayObjectContainer, windowWidth, windowHeight) {
         app=stg;
         widthDef=windowWidth;
         heightDef=windowHeight;
@@ -81,6 +83,11 @@ public class Stars {
         preloadAnimate.y = preloadBoard.y+preloadBoard.height;
         app.addChild(preloadBoard);
         app.addChild(preloadAnimate);
+
+        // Load local data
+        visites=SharedObject.getLocal("visites");
+
+        // XML Loading
         resourceList.onCompleteXmlLoad=function(){
             background.onComplete=function(){
                 // Loading music
@@ -93,12 +100,12 @@ public class Stars {
                         bgSoundChanel=bgSound.play();
                     });
                     // Create music button
-                    musicButtom.onComplete=function(){
+                    musicButtomImg.onComplete=function(){
                         musicButtom.x = lastVisitInfoText.x-musicButtom.width;
                         musicButtom.y = height-musicButtom.height;
                     }
-                    musicButtom.source=resourceList.getImageUrl('pause');
                     musicButtom.addEventListener(MouseEvent.CLICK,musicPlayPause);
+                    musicButtomImg.source=resourceList.getImageUrl('pause');
                     init();
                 });
                 sndLoader.load(
@@ -111,7 +118,7 @@ public class Stars {
             else
                 trace('Невозможно загрузить картинку "wallpaper"');
             if(resourceList.existsImage('star'))
-                faces=new Faces(resourceList.getImageUrl('star'));
+                stars=new Particles(resourceList.getImageUrl('star'));
             else
                 trace('Невозможно загрузить картинку "star"');
         }
@@ -124,12 +131,9 @@ public class Stars {
         // Save shared object
         lastVisitInfoText.defaultTextFormat=new TextFormat(null,15,0xFFFFFF);
         lastVisitInfoText.autoSize=TextFieldAutoSize.LEFT;
-        if(visites.data.lastVisitDate!=null)
-        {
-            lastVisitInfoText.text='Дата последнего запуска: '
-                    +(visites.data.lastVisitDate as Date).getDate().toString()+'.'+(visites.data.lastVisitDate as Date).getMonth().toString()+'.'+(visites.data.lastVisitDate as Date).getFullYear().toString()
-                    +' '+(visites.data.lastVisitDate as Date).getHours().toString()+':'+(visites.data.lastVisitDate as Date).getMinutes().toString()+':'+(visites.data.lastVisitDate as Date).getSeconds().toString();
-        }
+        var lastVD:Date=(visites.data.lastVisitDate as Date);
+        if(lastVD!=null)
+            lastVisitInfoText.text=Utils.getDateLastVisit(lastVD);
         else
             lastVisitInfoText.text='Это первый запуск программы';
         visites.data.lastVisitDate=new Date();
@@ -158,6 +162,7 @@ public class Stars {
 
         run();
         app.addChild(lastVisitInfoText);
+        musicButtom.addChild(musicButtomImg)
         app.addChild(musicButtom);
     }
     public function run(){
@@ -188,7 +193,7 @@ public class Stars {
         lastVisitInfoText.y = this.height-lastVisitInfoText.textHeight-8;
         musicButtom.x = lastVisitInfoText.x-musicButtom.width;
         musicButtom.y = this.height-musicButtom.height;
-        faces.produceFaces(500,new Rectangle(0,0,this.width,this.height));
+        stars.produceParticles(500,new Rectangle(0,0,this.width,this.height));
         redrawPaper();
     }
     public function redrawPaper(){
@@ -202,10 +207,10 @@ public class Stars {
 
     public function onEveryFrame(e:Event){
         clearPaper();
-        for each (var face:Face in faces.suit)
+        for each (var star:Particle in stars.suit)
         {
-            face.updateMatrixOnStep();
-            paper.bitmapData.draw(faces.original,face.mat,face.colorTrans,null,null,true);
+            star.updateMatrixOnStep();
+            paper.bitmapData.draw(stars.original,star.mat,star.colorTrans,null,null,true);
         }
     }
 }
