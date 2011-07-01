@@ -73,56 +73,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Main.as" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Main.as" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ru/lglab/Main.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="39" selection-start="1203" selection-end="1213" vertical-scroll-proportion="-0.6">
+            <state line="60" column="30" selection-start="1888" selection-end="1888" vertical-scroll-proportion="0.26732674">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Animate.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ru/lglab/Animate.as">
+      <file leaf-file-name="Stars.mxml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Stars.mxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="44" selection-start="1664" selection-end="1664" vertical-scroll-proportion="-21.44">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ImageCacher.as" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/ru/lglab/ImageCacher.as">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="23" selection-start="404" selection-end="404" vertical-scroll-proportion="0.18773466">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Particle.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ru/lglab/Particle.as">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="94" column="13" selection-start="3063" selection-end="3066" vertical-scroll-proportion="-29.24">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Particles.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ru/lglab/Particles.as">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="29" selection-start="774" selection-end="774" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ilib.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ru/lglab/ilib.as">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="0" selection-start="372" selection-end="372" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="3" column="22" selection-start="216" selection-end="216" vertical-scroll-proportion="-1.875">
+              <folding>
+                <marker date="1309521743000" expanded="true" signature="92:100" placeholder="{...}" />
+                <marker date="1309521743000" expanded="true" signature="92:100" placeholder="{...}" />
+                <marker date="1309521743000" expanded="true" signature="250:377" placeholder="{...}" />
+                <marker date="1309521743000" expanded="true" signature="250:377" placeholder="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -152,11 +121,11 @@
         <option value="$PROJECT_DIR$/src/ru/lglab/RemoteResourceList.as" />
         <option value="$PROJECT_DIR$/src/ru/lglab/Particles.as" />
         <option value="$PROJECT_DIR$/src/ru/lglab/Particle.as" />
-        <option value="$PROJECT_DIR$/src/ru/lglab/Main.as" />
-        <option value="$PROJECT_DIR$/src/Stars.mxml" />
         <option value="$PROJECT_DIR$/src/ru/lglab/ilib.as" />
         <option value="$PROJECT_DIR$/src/ru/lglab/Animate.as" />
         <option value="$PROJECT_DIR$/src/ru/lglab/ImageCacher.as" />
+        <option value="$PROJECT_DIR$/src/Stars.mxml" />
+        <option value="$PROJECT_DIR$/src/ru/lglab/Main.as" />
       </list>
     </option>
   </component>
@@ -438,7 +407,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="24" width="1282" height="977" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -448,12 +417,12 @@
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32527205" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32527205" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24614134" sideWeight="0.45465538" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24614134" sideWeight="0.30592504" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24614134" sideWeight="0.5356711" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24614134" sideWeight="0.35912937" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -562,45 +531,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/lglab/Particle.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="13" selection-start="3063" selection-end="3066" vertical-scroll-proportion="-29.24">
+        <state line="94" column="13" selection-start="3063" selection-end="3066" vertical-scroll-proportion="1.847569">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Stars.mxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="224" selection-end="224" vertical-scroll-proportion="0.07874016">
-          <folding>
-            <marker date="1309518134000" expanded="true" signature="92:100" placeholder="{...}" />
-            <marker date="1309518134000" expanded="true" signature="250:377" placeholder="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/lglab/Particles.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="29" selection-start="774" selection-end="774" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/lglab/Main.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="39" selection-start="1203" selection-end="1213" vertical-scroll-proportion="-0.6">
+        <state line="26" column="29" selection-start="774" selection-end="774" vertical-scroll-proportion="0.36386767">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ru/lglab/ilib.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="372" selection-end="372" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ru/lglab/Animate.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="44" selection-start="1664" selection-end="1664" vertical-scroll-proportion="-21.44">
+        <state line="14" column="0" selection-start="372" selection-end="372" vertical-scroll-proportion="0.26282853">
           <folding />
         </state>
       </provider>
@@ -608,6 +553,32 @@
     <entry file="file://$PROJECT_DIR$/src/ru/lglab/ImageCacher.as">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="23" selection-start="404" selection-end="404" vertical-scroll-proportion="0.18773466">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/lglab/Animate.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="44" selection-start="1664" selection-end="1664" vertical-scroll-proportion="0.7043364">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Stars.mxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="22" selection-start="216" selection-end="216" vertical-scroll-proportion="-1.875">
+          <folding>
+            <marker date="1309521743000" expanded="true" signature="92:100" placeholder="{...}" />
+            <marker date="1309521743000" expanded="true" signature="92:100" placeholder="{...}" />
+            <marker date="1309521743000" expanded="true" signature="250:377" placeholder="{...}" />
+            <marker date="1309521743000" expanded="true" signature="250:377" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ru/lglab/Main.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="30" selection-start="1888" selection-end="1888" vertical-scroll-proportion="0.26732674">
           <folding />
         </state>
       </provider>

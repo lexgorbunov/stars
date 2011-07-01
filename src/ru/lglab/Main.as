@@ -57,9 +57,9 @@ public class Main {
             musicState = true;
         }
         else {
-            musicButtomImg.source = resourceList.getImageUrl('play');
             musicPos = bgSoundChanel.position;
             bgSoundChanel.stop();
+            musicButtomImg.source = resourceList.getImageUrl('play');
             musicState = false;
         }
     }
