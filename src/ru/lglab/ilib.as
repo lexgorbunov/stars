@@ -14,10 +14,14 @@ public class ilib {
 //    [Embed(source="../../../res/img/star2.png")] public static var star2:Class;
 //    [Embed(source="../../../res/img/wallpaper1.jpeg")] public static var wallpaper1:Class;
 //    [Embed(source="../../../res/img/wallpaper2.jpeg")] public static var wallpaper2:Class;
-    [Embed(source="../../../res/img/loading.gif")] public static var imgLoading:Class;
-    [Embed(source="../../../res/img/loadGen.png")] public static var imgAnimateGen:Class;
-    [Embed(source="../../../res/img/play.png")] public static var imgPlay:Class;
-    [Embed(source="../../../res/img/pause.png")] public static var imgPause:Class;
+    [Embed(source="../../../res/img/loading.gif")]
+    public static var imgLoading:Class;
+    [Embed(source="../../../res/img/loadGen.png")]
+    public static var imgAnimateGen:Class;
+    [Embed(source="../../../res/img/play.png")]
+    public static var imgPlay:Class;
+    [Embed(source="../../../res/img/pause.png")]
+    public static var imgPause:Class;
 
     public function ilib() {
     }
